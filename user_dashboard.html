@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Dashboard - NUB Library</title>
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f5f6fa;
+      color: #2f3640;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      background-color: #273c75;
+      padding: 15px 20px;
+      color: white;
+    }
+
+    .header nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .header nav ul li a:hover,
+    .header nav ul li a.active {
+      color: #00a8ff;
+    }
+
+    /* Main dashboard */
+    .dashboard-main {
+      flex: 1;
+      padding: 30px 20px;
+    }
+
+    .dashboard-main h1 {
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+
+    .dashboard-main p {
+      margin-bottom: 20px;
+      color: #718093;
+    }
+
+    section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Search Section */
+    .search-section {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .search-section input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #dcdde1;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    .search-section button {
+      background-color: #00a8ff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .search-section button:hover {
+      background-color: #0097e6;
+    }
+
+    /* Borrowed Books Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table th, table td {
+      border: 1px solid #dcdde1;
+      padding: 12px 10px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #f1f2f6;
+    }
+
+    /* Profile Section */
+    .profile-section input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #dcdde1;
+      border-radius: 6px;
+    }
+
+    .profile-section button {
+      background-color: #00a8ff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .profile-section button:hover {
+      background-color: #0097e6;
+    }
+
+    /* Notifications */
+    .notifications ul {
+      list-style: disc inside;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #273c75;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .search-section {
+        flex-direction: column;
+      }
+      .search-section button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav>
+      <ul>
+        <li><a href="user_dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="index.php">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard-main">
+    <h1>Welcome, User!</h1>
+    <p>Manage your library activities here.</p>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+      <h2>Your Profile</h2>
+      <input type="text" placeholder="Full Name" />
+      <input type="email" placeholder="Email" />
+      <button onclick="alert('Profile update coming soon!')">Update Profile</button>
+    </section>
+
+    <!-- Search Books -->
+    <section class="search-section">
+      <input type="text" placeholder="Search books..." id="bookSearch" />
+      <button onclick="alert('Search functionality coming soon!')">Search</button>
+    </section>
+
+    <!-- Borrowed Books -->
+    <section class="borrowed-books">
+      <h2>Your Borrowed Books</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Borrowed Date</th>
+            <th>Due Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Introduction to Programming</td>
+            <td>John Doe</td>
+            <td>2025-08-01</td>
+            <td>2025-08-15</td>
+            <td>
+              <button onclick="alert('Return book functionality coming soon!')">Return</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Data Communication</td>
+            <td>Jane Smith</td>
+            <td>2025-08-05</td>
+            <td>2025-08-20</td>
+            <td>
+              <button onclick="alert('Return book functionality coming soon!')">Return</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Notifications -->
+    <section class="notifications">
+      <h2>Notifications</h2>
+      <ul>
+        <li>No new notifications.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Northern University Bangladesh</p>
+  </footer>
+
+  <script>
+    // JS Placeholder
+  </script>
+</body>
+</html>

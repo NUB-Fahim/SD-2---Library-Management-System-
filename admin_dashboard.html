@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard - NUB Library</title>
+  <style>
+    * {
+      margin:0; padding:0; box-sizing:border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f5f6fa;
+      color:#2f3640;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+    .header {
+      background-color:#273c75;
+      padding:15px 20px;
+      color:white;
+    }
+    .header nav ul {
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+    .header nav ul li a {
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+    .header nav ul li a:hover,
+    .header nav ul li a.active {
+      color:#00a8ff;
+    }
+    .dashboard-main {
+      flex:1;
+      padding:30px 20px;
+    }
+    h1 { margin-bottom:10px; font-size:2em;}
+    p { margin-bottom:20px; color:#718093;}
+    section { background:white; padding:20px; border-radius:10px; margin-bottom:25px; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+    .manage-books button, .manage-users button { background:#00a8ff; color:white; border:none; padding:8px 12px; margin-right:5px; border-radius:6px; cursor:pointer; font-weight:bold; transition:0.3s;}
+    .manage-books button:hover, .manage-users button:hover { background:#0097e6;}
+    table { width:100%; border-collapse:collapse; margin-top:15px;}
+    th, td { border:1px solid #dcdde1; padding:10px; text-align:left;}
+    th { background:#f1f2f6;}
+    .footer { background:#273c75; color:white; text-align:center; padding:15px 0;}
+    @media(max-width:768px){
+      .header nav ul { flex-direction:column; gap:10px;}
+      .manage-books button, .manage-users button{margin-bottom:10px; width:100%;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav>
+      <ul>
+        <li><a href="admin_dashboard.php" class="active">Dashboard</a></li>
+        <li><a href="#">Add Book</a></li>
+        <li><a href="#">View Books</a></li>
+        <li><a href="#">Manage Users</a></li>
+        <li><a href="index.php">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main class="dashboard-main">
+    <h1>Welcome, Admin!</h1>
+    <p>Here you can manage all books, users, and library activities.</p>
+
+    <!-- Manage Books Section -->
+    <section class="manage-books">
+      <h2>Book Management</h2>
+      <button onclick="alert('Add book feature coming soon!')">Add Book</button>
+      <button onclick="alert('Edit book feature coming soon!')">Edit Book</button>
+      <button onclick="alert('Delete book feature coming soon!')">Delete Book</button>
+
+      <!-- Books Table -->
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Code</th>
+            <th>Status</th>
+            <th>Created At</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Sample Books Data -->
+          <tr><td>1</td><td>Business 101</td><td>Author A</td><td>Business</td><td>BUS001</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>2</td><td>Marketing Basics</td><td>Author B</td><td>Business</td><td>BUS002</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>3</td><td>Finance Principles</td><td>Author C</td><td>Business</td><td>BUS003</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>4</td><td>Entrepreneurship Guide</td><td>Author D</td><td>Business</td><td>BUS004</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>5</td><td>Corporate Strategy</td><td>Author E</td><td>Business</td><td>BUS005</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>6</td><td>Human Anatomy</td><td>Author F</td><td>Health Science</td><td>HEA001</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>7</td><td>Nutrition Essentials</td><td>Author G</td><td>Health Science</td><td>HEA002</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>8</td><td>Public Health Basics</td><td>Author H</td><td>Health Science</td><td>HEA003</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>9</td><td>Medical Ethics</td><td>Author I</td><td>Health Science</td><td>HEA004</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>10</td><td>Pharmacology 101</td><td>Author J</td><td>Health Science</td><td>HEA005</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>11</td><td>Sociology Intro</td><td>Author K</td><td>Humanities & Social Science</td><td>HSS001</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>12</td><td>Philosophy Basics</td><td>Author L</td><td>Humanities & Social Science</td><td>HSS002</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>13</td><td>History of Art</td><td>Author M</td><td>Humanities & Social Science</td><td>HSS003</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>14</td><td>Psychology 101</td><td>Author N</td><td>Humanities & Social Science</td><td>HSS004</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>15</td><td>Cultural Studies</td><td>Author O</td><td>Humanities & Social Science</td><td>HSS005</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>16</td><td>Constitutional Law</td><td>Author P</td><td>Law</td><td>LAW001</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>17</td><td>Criminal Law</td><td>Author Q</td><td>Law</td><td>LAW002</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>18</td><td>Civil Procedure</td><td>Author R</td><td>Law</td><td>LAW003</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>19</td><td>International Law</td><td>Author S</td><td>Law</td><td>LAW004</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>20</td><td>Legal Ethics</td><td>Author T</td><td>Law</td><td>LAW005</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>21</td><td>Physics Fundamentals</td><td>Author U</td><td>Science & Engineering</td><td>SCI001</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>22</td><td>Chemistry Basics</td><td>Author V</td><td>Science & Engineering</td><td>SCI002</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>23</td><td>Biology Essentials</td><td>Author W</td><td>Science & Engineering</td><td>SCI003</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>24</td><td>Mechanical Engineering</td><td>Author X</td><td>Science & Engineering</td><td>SCI004</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+          <tr><td>25</td><td>Electrical Engineering</td><td>Author Y</td><td>Science & Engineering</td><td>SCI005</td><td>1</td><td>2025-08-20 21:07:09</td><td><button>Edit</button><button>Copy</button><button>Delete</button></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Manage Users Section -->
+    <section class="manage-users">
+      <h2>User Management</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>fahim@gmail.com</td><td>User</td><td><button>Edit</button><button>Delete</button></td></tr>
+          <tr><td>2</td><td>urmi@gmail.com</td><td>User</td><td><button>Edit</button><button>Delete</button></td></tr>
+          <tr><td>3</td><td>chhanda@gmail.com</td><td>User</td><td><button>Edit</button><button>Delete</button></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Northern University Bangladesh</p>
+  </footer>
+</body>
+</html>
