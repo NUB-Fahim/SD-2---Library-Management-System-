@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.info-box {
+  flex: 1;
+  background: linear-gradient(135deg, #d7eaff 0%, #a3c4f3 100%);
+  padding: 50px 40px;
+  border-radius: 12px 0 0 12px;
+  color: #0d2c54;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-box h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  color: #0b1e3a;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
+}
+
+.info-box h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #174ea6;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.info-box p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #23395ddd;
+}
+
+.info-box ul {
+  list-style: inside disc;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #112a54;
+}
+
+.info-box ul li {
+  margin-bottom: 10px;
+  padding-left: 6px;
+}
+
+
+
+.form-container {
+  flex: 1;
+  padding: 40px 30px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box h3 {
+  margin-bottom: 20px;
+  color: #007bff;
+  font-size: 24px;
+}
+
+form input,
+form select {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.forgot {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.switch-form {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.switch-form span {
+  color: #007bff;
+  cursor: pointer;
+}
